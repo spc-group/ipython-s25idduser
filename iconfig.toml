@@ -1,0 +1,113 @@
+[facility]
+name = "Advanced Photon Source"
+
+[beamline]
+name = "25-ID-D"
+is_connected = true
+
+[shutter]
+
+[shutter.A]
+
+open_pv = "PSS:25ID:FES_OPEN_EPICS.VAL"
+close_pv = "PSS:25ID:FES_CLOSE_EPICS.VAL"
+status_pv = "PSS:25ID:A_BEAM_PRESENT"
+
+[shutter.D]
+
+open_pv = "PSS:25ID:SDS_OPEN_EPICS.VAL"
+close_pv = "PSS:25ID:SDS_CLOSE_EPICS.VAL"
+status_pv = "PSS:25ID:D_BEAM_PRESENT"
+
+[ion_chamber.scaler]
+ioc = "25iddVME"
+record = "3820:scaler1"
+
+[ion_chamber.preamp]
+ioc = "25idd"
+
+# [ion_chamber.Ipreslit]
+# scaler_channel = 2
+# preamp_record = "SR01:IpreSlit"
+
+# [ion_chamber.IpreKB]
+# scaler_channel = 3
+# preamp_record = "SR02:IpreKB"
+
+# [ion_chamber.I0]
+# scaler_channel = 2
+# preamp_record = "SR01:IpreKB"
+# voltage_pv = "25iddVME:userCalc1"
+
+# [ion_chamber.It]
+# scaler_channel = 5
+# preamp_record = "SR04:Iref"
+
+[ion_chamber.ch2]
+preamp_record = "SR01:IpreKB"
+
+[ion_chamber.ch3]
+preamp_record = "SR02:I0"
+
+[ion_chamber.ch4]
+preamp_record = "SR03:It"
+
+[ion_chamber.ch5]
+preamp_record = "SR04:Iref"
+
+[ion_chamber.ch6]
+preamp_record = "SR01:IpreKB"
+
+[ion_chamber.ch7]
+preamp_record = "SR02:I0"
+
+[ion_chamber.ch8]
+preamp_record = "SR03:It"
+
+[motor]
+iocs = ["25iddVME",]
+
+[stage.Aerotech]
+prefix = "25idd"
+pv_vert = ":m2"
+pv_horiz = ":m1"
+
+[monochromator]
+ioc = "25idDCM:LERIX"
+energy_ioc = "25idb:DCM:Lerix"
+
+[undulator]
+ioc = "ID25us"
+
+[camera]
+imagej_command = "/home/beams/S25IDCUSER/ImageJ/ImageJ"
+
+[camera.camBPM]
+name = "Hutch A BPM"
+description = "Hutch A BPM"
+ioc = "25idaBPM"
+
+[camera.camA]
+name = "s25id-gige-A"
+description = "GigE Vision A"
+ioc = "25idgigeA"
+
+[camera.camB]
+name = "s25id-gige-B"
+description = "GigE Vision B"
+ioc = "25idgigeB"
+
+[camera.camC]
+name = "s25id-gige-C"
+description = "GigE Vision C"
+ioc = "25idgigeC"
+
+[camera.camD]
+name = "s25id-gige-D"
+description = "GigE Vision D"
+ioc = "25idgigeD"
+
+[camera.camE]
+name = "s25id-gige-E"
+description = "GigE Vision E"
+ioc = "25idgigeE"
