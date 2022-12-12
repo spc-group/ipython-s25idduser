@@ -5,6 +5,17 @@ name = "Advanced Photon Source"
 name = "25-ID-D"
 is_connected = true
 
+[database.databroker]
+
+catalog = "s25idd"
+
+[queueserver]
+kafka_topic = "s25idd_queueserver"
+control_host = "fedorov"
+control_port = "60616"
+info_host = "fedorov"
+info_port = "60626"
+
 [shutter]
 
 [shutter.A]
