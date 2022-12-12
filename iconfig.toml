@@ -26,46 +26,38 @@ record = "3820:scaler1"
 [ion_chamber.preamp]
 ioc = "25idd"
 
-# [ion_chamber.Ipreslit]
-# scaler_channel = 2
-# preamp_record = "SR01:IpreSlit"
-
-# [ion_chamber.IpreKB]
-# scaler_channel = 3
-# preamp_record = "SR02:IpreKB"
-
-# [ion_chamber.I0]
-# scaler_channel = 2
-# preamp_record = "SR01:IpreKB"
-# voltage_pv = "25iddVME:userCalc1"
-
-# [ion_chamber.It]
-# scaler_channel = 5
-# preamp_record = "SR04:Iref"
-
 [ion_chamber.ch2]
-preamp_record = "SR01:IpreKB"
+preamp_record = "SR01"
 
 [ion_chamber.ch3]
-preamp_record = "SR02:I0"
+preamp_record = "SR02"
 
 [ion_chamber.ch4]
-preamp_record = "SR03:It"
+preamp_record = "SR03"
 
 [ion_chamber.ch5]
-preamp_record = "SR04:Iref"
+preamp_record = "SR04"
 
 [ion_chamber.ch6]
-preamp_record = "SR01:IpreKB"
+preamp_record = "SR05"
 
 [ion_chamber.ch7]
-preamp_record = "SR02:I0"
+preamp_record = "SR06"
 
 [ion_chamber.ch8]
-preamp_record = "SR03:It"
+preamp_record = "SR07"
 
-[motor]
-iocs = ["25iddVME",]
+[motor.VME_crate]
+prefix = "25iddVME"
+num_motors = 56
+
+[motor.IRM]
+prefix = "25ida:IRM"
+num_motors = 5
+
+[motor.WB_slit]
+prefix = "25ida:slits"
+num_motors = 8
 
 [stage.Aerotech]
 prefix = "25idd"
