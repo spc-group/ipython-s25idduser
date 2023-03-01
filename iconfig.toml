@@ -33,30 +33,10 @@ status_pv = "PSS:25ID:D_BEAM_PRESENT"
 [ion_chamber.scaler]
 ioc = "25iddVME"
 record = "3820:scaler1"
+channels = [2, 3, 4, 5, 6, 7, 8]
 
 [ion_chamber.preamp]
 ioc = "25idd"
-
-[ion_chamber.ch2]
-preamp_record = "SR01"
-
-[ion_chamber.ch3]
-preamp_record = "SR02"
-
-[ion_chamber.ch4]
-preamp_record = "SR03"
-
-[ion_chamber.ch5]
-preamp_record = "SR04"
-
-[ion_chamber.ch6]
-preamp_record = "SR05"
-
-[ion_chamber.ch7]
-preamp_record = "SR06"
-
-[ion_chamber.ch8]
-preamp_record = "SR07"
 
 [motor.VME_crate]
 prefix = "25iddVME"
@@ -76,8 +56,8 @@ pv_vert = ":m2"
 pv_horiz = ":m1"
 
 [monochromator]
-ioc = "25idDCM:LERIX"
-energy_ioc = "25idb:DCM:Lerix"
+ioc = "25idbLerix"
+ioc_branch = "Lerix"
 
 [undulator]
 ioc = "ID25us"
