@@ -5,6 +5,16 @@ name = "Advanced Photon Source"
 name = "25-ID-D"
 is_connected = true
 
+[bss]
+
+beamline = "25-ID-D,E"
+prefix = "25idd:bss"
+
+[xray_source]
+
+type = "undulator"
+prefix = "ID25us:"
+
 [database.databroker]
 
 catalog = "s25idd"
@@ -68,29 +78,41 @@ imagej_command = "/home/beams/S25IDCUSER/ImageJ/ImageJ"
 [camera.camBPM]
 name = "Hutch A BPM"
 description = "Hutch A BPM"
-ioc = "25idaBPM"
+prefix = "25idaBPM"
 
 [camera.camA]
 name = "s25id-gige-A"
 description = "GigE Vision A"
-ioc = "25idgigeA"
+prefix = "25idgigeA"
 
 [camera.camB]
 name = "s25id-gige-B"
 description = "GigE Vision B"
-ioc = "25idgigeB"
+prefix = "25idgigeB"
 
 [camera.camC]
 name = "s25id-gige-C"
 description = "GigE Vision C"
-ioc = "25idgigeC"
+prefix = "25idgigeC"
 
 [camera.camD]
 name = "s25id-gige-D"
 description = "GigE Vision D"
-ioc = "25idgigeD"
+prefix = "25idgigeD"
 
 [camera.camE]
 name = "s25id-gige-E"
 description = "GigE Vision E"
-ioc = "25idgigeE"
+prefix = "25idgigeE"
+
+[area_detector.sim_det]
+
+prefix = "25idSimDet"
+device_class = "SimDetector"
+
+[lerix.lerix.rowland]
+
+x_motor_pv = "25iddVME:m26"
+y_motor_pv = "25iddVME:m27"
+z_motor_pv = "25iddVME:m26"
+z1_motor_pv = "25iddVME:m21"
